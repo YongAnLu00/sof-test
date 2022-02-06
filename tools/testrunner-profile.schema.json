@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "",
+  "title": "SOF Test Profile",
+  "type": "object",
+  "properties": {
+    "env": {
+      "type": "object",
+      "properties": {
+        "MODEL": {
+          "type": "string"
+        },
+        "TPLG": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": { "type": "string" }
+    },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name" : {
+            "type": "string"
+          },
+          "args" : {
+            "type": "string"
+          },
+          "timeout": {
+            "type": ["integer", "null"]
+          },
+          "skip": {
+            "type": ["boolean", "string"]
+          },
+          "env": {
+            "type": "object",
+            "additionalProperties": { "type": "string" }
+          }
+        },
+        "required": ["name"]
+      }
+    }
+  },
+  "required": ["cases"]
+}

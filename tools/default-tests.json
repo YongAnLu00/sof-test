@@ -1,0 +1,19 @@
+{
+    "cases": [
+        {
+            "name": "verify-kernel-boot-log.sh",
+            "timeout": 5
+        },
+        {
+            "name": "check-playback.sh",
+            "args": "-F -l 3",
+            "timeout": 5
+        },
+        {
+            "skip": "Not Supported",
+            "name": "check-suspend-resume.sh",
+            "args": "-l 3",
+            "timeout": 5
+        }
+    ]
+}
